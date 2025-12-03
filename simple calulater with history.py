@@ -20,9 +20,17 @@ while True:
         try:
             ans=eval(userinput)
             print(ans)
-            with open("data.txt",'a') as f:
-                f.write(f'{userinput}={ans}')
+            with open("data.txt",'a+') as f:
+                if his:
+                    f.seek(0)
+                    lines = f.readlines()
+                    first_char = int(lines[-1].strip()[0])
+                    # print(first_char)
+
+                    f.write(f'{first_char+1}.{userinput}={ans}\n')
+                else:
+                    f.write(f'1.{userinput}={ans}\n')
+
 
         except:
             print('unetical input!!!')
-
