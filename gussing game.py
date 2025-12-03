@@ -25,12 +25,12 @@ while True:
     attempt=0
     while True:
         gusses=input(f'pls enter a guess of lenght {len_word} or if you want to give up make this pattern {{(*_*)}}:')
+        if gusses=="(*_*)" :
+            print(f'the word was >>{word}')
+            break
         if len(gusses)!=len_word:
             print('pls enter the word in coorrect lenght!!!!!!!!!!!')
             continue
-        if gusses=="(*_*)" :
-            print(word)
-            break
         if gusses==word:
             print(f'you did it!{{in {attempt} attempts !!!}}')
             break
