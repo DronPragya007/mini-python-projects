@@ -25,3 +25,9 @@ quiz_data = [
     options_list,
     explanations_list
 ]
+**must be the same**.
+
+Example:
+- 5 questions → 5 option lists → 5 explanations
+
+If these lengths do not match, the quiz may show wrong options or crash.
